@@ -5,22 +5,20 @@
 	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
 	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
-	<changeSet id="a5d267f35f80a86981d8a44bd151ed927065c882" author="(PROD)-Generated" failOnError="false"    >
-		<n0:createOracleTrigger objectName="SET_DATE_BI" objectType="TRIGGER" ownerName="PROD"   >
+	<changeSet id="0c72d515884f46d187045a36bf7fa0c28bdabf79" author="(DEV)-Generated" failOnError="false"    >
+		<n0:createOracleTrigger objectName="SET_DATE_BI" objectType="TRIGGER" ownerName="DEV"   >
 			<n0:source><![CDATA[
-  CREATE OR REPLACE EDITIONABLE TRIGGER "PROD"."SET_DATE_BI" 
+  CREATE OR REPLACE EDITIONABLE TRIGGER "DEV"."SET_DATE_BI" 
   BEFORE INSERT ON trees
   FOR EACH ROW
 BEGIN
-
   if :new.submition_date is null THEN
     :new.submition_date := systimestamp;
   end if;
-
 END set_date_bi;
 
 /
-ALTER TRIGGER "PROD"."SET_DATE_BI" ENABLE]]></n0:source>
+ALTER TRIGGER "DEV"."SET_DATE_BI" ENABLE]]></n0:source>
 		</n0:createOracleTrigger>
 	</changeSet>
 </databaseChangeLog>

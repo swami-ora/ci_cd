@@ -5,18 +5,15 @@
 	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
 	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
-	<changeSet id="1992f0ba1768ba7ffc35e81666dc03082aa761ea" author="(PROD)-Generated" failOnError="false"    >
-		<n0:createOracleProcedure objectName="ADMIN_EMAIL_SET" objectType="PROCEDURE" ownerName="PROD"   >
+	<changeSet id="aa8901cd52e19cd921bfa9e16a8980818d1f0fa2" author="(DEV)-Generated" failOnError="false"    >
+		<n0:createOracleProcedure objectName="ADMIN_EMAIL_SET" objectType="PROCEDURE" ownerName="DEV"   >
 			<n0:source><![CDATA[
-  CREATE OR REPLACE EDITIONABLE PROCEDURE "PROD"."ADMIN_EMAIL_SET" 
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "DEV"."ADMIN_EMAIL_SET" 
 IS
 BEGIN
         update trees
            set submitter_email = 'swaminathan.gnanasambandam@oracle.com'
-        where submitter_email is null;
-
-end admin_email_set;
-]]></n0:source>
+        where submitter_email is null;end admin_email_set;]]></n0:source>
 		</n0:createOracleProcedure>
 	</changeSet>
 </databaseChangeLog>
